@@ -40,6 +40,7 @@ void PrintArray(string[] array)
     {   
         Console.Write($"[{array[i]}] ");
     }
+    Console.WriteLine();
 }
 
 void M(string[] array)
@@ -67,7 +68,25 @@ void M(string[] array)
     }
 }
 
-string[] array = new string[5];
+void FinArray(string[] second_array, string[] array)
+{
+    int count = 0;
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+    if (array[i].Length <= 3)
+    {
+        second_array[count] = array[i];
+        count++;
+    }
+    }
+}
+
+
+string[] second_array = new string[10];
+string[] array = new string[10];
 M(array);
 Console.WriteLine("Изначальный массив: ");
 PrintArray(array);
+FinArray(second_array, array);
+Console.WriteLine("Конечный массив: ");
+PrintArray(second_array);
