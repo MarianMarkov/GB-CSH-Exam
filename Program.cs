@@ -43,7 +43,7 @@ void PrintArray(string[] array)
     Console.WriteLine();
 }
 
-void M(string[] array)
+void CreateWay(string[] array)
 {
     Console.WriteLine("В программе представлено три способа создания массива: \n 1. CreateArraySmart - оптимизированный способ, использующий определенный функционал языка \n 2. CreateArraySimple - простой и примитивный способ \n 3. CreateArrayManual - ручной ввод массива");
     Console.Write("Укажите цифру желаемого способа создания массива: ");
@@ -64,7 +64,7 @@ void M(string[] array)
     else
     {
         Console.WriteLine("УКАЗАНО НЕВЕРНОЕ ЗНАЧЕНИЕ");
-        M(array);
+        CreateWay(array);
     }
 }
 
@@ -81,12 +81,11 @@ void FinArray(string[] second_array, string[] array)
     }
 }
 
-
-string[] second_array = new string[10];
 string[] array = new string[10];
-M(array);
+CreateWay(array);
 Console.WriteLine("Изначальный массив: ");
 PrintArray(array);
+string[] second_array = new string[10];
 FinArray(second_array, array);
 Console.WriteLine("Конечный массив: ");
 PrintArray(second_array);
